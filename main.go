@@ -7,4 +7,7 @@ func main() {
 	// hand.print()
 	// remain.print()
 	cards.saveToFile("result.txt")
+
+	new_deck := newDeckFromFile("result.txt")
+	new_deck.print()
 }

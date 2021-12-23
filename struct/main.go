@@ -12,6 +12,10 @@ func (p person) print() {
 	fmt.Printf("%+v", p)
 }
 
+func (p *person) changename(name string) {
+	(*p).firstName = name
+}
+
 func main() {
 	alex := person{firstName: "hello", lastName: "world"}
 	alex.print()
@@ -21,4 +25,9 @@ func main() {
 	alpha.lastName = "def"
 
 	alpha.print()
+
+	beta := person{firstName: "hello", lastName: "world"}
+	beta.changename("tttt")
+	beta.print()
+
 }

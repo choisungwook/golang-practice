@@ -7,13 +7,18 @@ type person struct {
 	lastName  string
 }
 
+func (p person) print() {
+	fmt.Println(p)
+	fmt.Printf("%+v", p)
+}
+
 func main() {
 	alex := person{firstName: "hello", lastName: "world"}
-	fmt.Println(alex)
-	fmt.Printf("%+v", alex)
+	alex.print()
 
 	var alpha person
 	alpha.firstName = "abc"
 	alpha.lastName = "def"
-	fmt.Printf("%+v", alpha)
+
+	alpha.print()
 }
